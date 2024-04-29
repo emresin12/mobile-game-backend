@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------
+Test set: com.dreamgames.backendengineeringcasestudy.service.UserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.244 s <<< FAILURE! -- in com.dreamgames.backendengineeringcasestudy.service.UserServiceTest
+com.dreamgames.backendengineeringcasestudy.service.UserServiceTest.enterTournament_NoAvailableGroup_shouldCreateNewGroup -- Time elapsed: 0.008 s <<< ERROR!
+org.mockito.exceptions.misusing.NotAMockException: 
+
+Argument passed to verify() is of type UserService and is not a mock!
+Make sure you place the parenthesis correctly!
+See the examples of correct verifications:
+    verify(mock).someMethod();
+    verify(mock, times(10)).someMethod();
+    verify(mock, atLeastOnce()).someMethod();
+	at com.dreamgames.backendengineeringcasestudy.service.UserServiceTest.enterTournament_NoAvailableGroup_shouldCreateNewGroup(UserServiceTest.java:364)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.dreamgames.backendengineeringcasestudy.service.UserServiceTest.enterTournament_ValidUserNotInGroup_ReturnsGroupLeaderboard -- Time elapsed: 0.003 s <<< ERROR!
+org.springframework.web.server.ResponseStatusException: 400 BAD_REQUEST "User has a pending reward to claim. Please claim it first."
+	at com.dreamgames.backendengineeringcasestudy.service.UserService.validateUserTournamentEligibility(UserService.java:87)
+	at com.dreamgames.backendengineeringcasestudy.service.UserService.enterTournament(UserService.java:115)
+	at com.dreamgames.backendengineeringcasestudy.service.UserServiceTest.enterTournament_ValidUserNotInGroup_ReturnsGroupLeaderboard(UserServiceTest.java:249)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.dreamgames.backendengineeringcasestudy.service.UserServiceTest.enterTournament_ThereIsAvailableGroupWithNotActiveGroup_shouldEnterUserIntoTournament -- Time elapsed: 0.002 s <<< ERROR!
+org.mockito.exceptions.misusing.NotAMockException: 
+
+Argument passed to verify() is of type UserService and is not a mock!
+Make sure you place the parenthesis correctly!
+See the examples of correct verifications:
+    verify(mock).someMethod();
+    verify(mock, times(10)).someMethod();
+    verify(mock, atLeastOnce()).someMethod();
+	at com.dreamgames.backendengineeringcasestudy.service.UserServiceTest.enterTournament_ThereIsAvailableGroupWithNotActiveGroup_shouldEnterUserIntoTournament(UserServiceTest.java:332)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
