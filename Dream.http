@@ -1,0 +1,73 @@
+# Dream
+
+###
+# group: Status
+# @name Status
+GET http://localhost:8080/status
+
+###
+# group: User
+# @name GetUserById
+GET http://localhost:8080/user/get/102
+
+###
+# group: User
+# @name CreateUser
+GET http://localhost:8080/user/create/emresin
+
+###
+# group: User
+# @name CreateUserTest
+POST http://localhost:8080/user/create-test
+Content-Type: application/json
+
+{
+  "level": 2,
+  "coins": 1000,
+  "country": "FRANCE"
+}
+
+###
+# group: User
+# @name UpdateLevelRequest
+GET http://localhost:8080/user/progress/97
+
+###
+# group: User
+# @name EnterTournamentRequest
+GET http://localhost:8080/user/enter-tournament/1
+
+###
+# group: User
+# @name ClaimUserReward
+GET http://localhost:8080/user/claim-reward/93
+
+###
+# group: User
+# @name GetUserRank
+GET http://localhost:8080/user/get-user-rank/102
+
+###
+# group: Tournament
+# @name StartTournament
+GET http://localhost:8080/tournament/start
+
+###
+# group: Tournament
+# @name EndTournament
+GET http://localhost:8080/tournament/end
+
+###
+# group: Leaderboard
+# @name GetGroupLeaderboard
+GET http://localhost:8080/leaderboard/group/505
+
+###
+# group: Leaderboard
+# @name GetCountryLeaderboard
+GET http://localhost:8080/leaderboard/country
+
+###
+# group: Leaderboard
+# @name GetGroupLeaderboardByUserId
+GET http://localhost:8080/leaderboard/group/by-user-id/2
