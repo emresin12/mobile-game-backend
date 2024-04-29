@@ -63,14 +63,14 @@ class UserServiceTest {
         user = new User();
         user.setUserId(1L);
         user.setUsername("testuser");
-        user.setLevel(STARTING_LEVEL);
+        user.setLevel(TOURNAMENT_REQUIRED_LEVEL + 1);
         user.setCoins(STARTING_COINS);
         user.setCountry(Country.TURKEY);
 
         newUser = new User();
         newUser.setUserId(2L);
         newUser.setUsername("newuser");
-        newUser.setLevel(STARTING_LEVEL);
+        newUser.setLevel(TOURNAMENT_REQUIRED_LEVEL + 1);
         newUser.setCoins(STARTING_COINS);
         newUser.setCountry(Country.TURKEY);
 
