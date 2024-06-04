@@ -2,8 +2,7 @@
 
 ### Overview
 
-As described in the requirements the game needs to be highly performant and scalable in order to serve to tens of
-millions of users daily. In order to achieve this level of performance I took some architectural design decisions.
+I created a mobile game backend that contains progress and tournament logic. Tournament has matchmaking system that is required to run in real-time. I wanted to backend to be scalable and efficient as much as possible in order to handle large load.
 
 ### Architecture and Design
 
